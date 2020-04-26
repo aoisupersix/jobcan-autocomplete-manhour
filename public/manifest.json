@@ -4,6 +4,11 @@
   "name": "ジョブカン工数自動入力",
   "description": "ジョブカンの工数入力を残労働時間で勝手に埋めてくれる便利extension",
   "version": "0.0.1",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
 
   "content_scripts": [
     {
