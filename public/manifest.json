@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "ジョブカン工数自動入力",
+  "description": "ジョブカンの工数入力を残労働時間で勝手に埋めてくれる便利extension",
+  "version": "0.0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["https://ssl.jobcan.jp/employee/man-hour-manage*"],
+      "js": ["js/vendor.js", "js/content_script.js"]
+    }
+  ]
+}
