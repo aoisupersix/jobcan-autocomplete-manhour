@@ -25,6 +25,7 @@
     "@types/chrome": "0.0.104",
     "@types/jquery": "^3.3.35",
     "copy-webpack-plugin": "^5.1.1",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
