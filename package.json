@@ -22,7 +22,7 @@
     "jquery": "^3.5.0"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.104",
+    "@types/chrome": "0.0.106",
     "@types/jquery": "^3.3.35",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
