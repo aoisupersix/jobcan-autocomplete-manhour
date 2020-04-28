@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { paddingZero } from './utility/padding-zero'
 
 /**
  * 時間と分のセット
@@ -34,7 +35,10 @@ const getRemainingWorkingHourAndMinutes = (): HourMinutes | null => {
 const getRemainingWorkingTimeString = (): string => {
   const hourMinutes = getRemainingWorkingHourAndMinutes()
   if (hourMinutes !== null) {
-    return `${hourMinutes.hour}:${hourMinutes.minutes}`
+    return `${paddingZero(hourMinutes.hour, 2)}:${paddingZero(
+      hourMinutes.minutes,
+      2
+    )}`
   }
 
   return ''
