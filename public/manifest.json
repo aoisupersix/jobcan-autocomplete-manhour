@@ -15,5 +15,10 @@
       "matches": ["https://ssl.jobcan.jp/employee/man-hour-manage*"],
       "js": ["js/vendor.js", "js/content_script.js"]
     }
-  ]
+  ],
+
+  "browser_action": {
+    "default_title": "ジョブカン工数自動入力",
+    "default_popup": "popup.html"
+  }
 }

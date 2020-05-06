@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     /* eslint-disable-next-line @typescript-eslint/camelcase */
     content_script: path.join(__dirname, srcDir + 'content_script.ts'),
+    popup: path.join(__dirname, srcDir + 'ui/popup.tsx'),
   },
   output: {
     path: path.join(__dirname, '../dist/js'),
@@ -25,6 +26,10 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
