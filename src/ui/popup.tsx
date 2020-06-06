@@ -4,7 +4,7 @@ import { FormControl, TextField, Typography } from '@material-ui/core'
 
 import '../styles/popup.css'
 
-class Hello extends React.Component {
+class Popup extends React.Component {
   render(): JSX.Element {
     return (
       <div className="popup-padded">
@@ -19,4 +19,4 @@ class Hello extends React.Component {
   }
 }
 
-ReactDOM.render(<Hello />, document.getElementById('root'))
+ReactDOM.render(<Popup />, document.getElementById('root'))
