@@ -1,16 +1,20 @@
 import { createConnectedStore, Store } from 'undux'
 import { ManhourType } from './manhour-type'
+import withChromeStorage from './with-chrome-storage'
 
-type State = {
+export type State = {
   manhourType: ManhourType
 }
 
-export default createConnectedStore<State>({
-  manhourType: {
-    project: '',
-    task: '',
+export default createConnectedStore<State>(
+  {
+    manhourType: {
+      project: '',
+      task: '',
+    },
   },
-})
+  withChromeStorage
+)
 
 export type StoreProps = {
   store: Store<State>
