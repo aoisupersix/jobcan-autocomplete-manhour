@@ -3,6 +3,18 @@ import { FormControl, TextField, Typography } from '@material-ui/core'
 import Store, { StoreProps } from '../states/store'
 
 class SelectManhourType extends React.Component<StoreProps> {
+  changeProject(
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void {
+    this.props.manhourType.set('project')(event.target.value)
+  }
+
+  changeTask(
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void {
+    this.props.manhourType.set('task')(event.target.value)
+  }
+
   render(): JSX.Element {
     const { manhourType } = this.props
     return (
@@ -14,11 +26,13 @@ class SelectManhourType extends React.Component<StoreProps> {
             label="プロジェクト"
             id="autocomplete-projectname"
             value={manhourType.get('project')}
+            onChange={(e): void => this.changeProject(e)}
           />
           <TextField
             label="タスク"
             id="autocomplete-taskname"
             value={manhourType.get('task')}
+            onChange={(e): void => this.changeTask(e)}
           />
         </FormControl>
       </div>
