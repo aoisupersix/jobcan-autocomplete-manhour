@@ -4,7 +4,7 @@ import Store, { StoreProps } from '../states/store'
 
 class SelectManhourType extends React.Component<StoreProps> {
   render(): JSX.Element {
-    const { store } = this.props
+    const { manhourType } = this.props
     return (
       <div className="popup-padded">
         <Typography>ジョブカン工数自動入力</Typography>
@@ -13,12 +13,12 @@ class SelectManhourType extends React.Component<StoreProps> {
           <TextField
             label="プロジェクト"
             id="autocomplete-projectname"
-            value={store.get('manhourType').project}
+            value={manhourType.get('project')}
           />
           <TextField
             label="タスク"
             id="autocomplete-taskname"
-            value={store.get('manhourType').task}
+            value={manhourType.get('task')}
           />
         </FormControl>
       </div>
@@ -26,4 +26,4 @@ class SelectManhourType extends React.Component<StoreProps> {
   }
 }
 
-export default Store.withStore(SelectManhourType)
+export default Store.withStores(SelectManhourType)

@@ -1,8 +1,8 @@
-import { Effects } from 'undux'
+import { EffectsAs } from 'undux'
 import { State } from './store'
 
-const withChromeStorage: Effects<State> = (store) => {
-  store.onAll().subscribe(({ key, value }) => {
+const withChromeStorage: EffectsAs<State> = (store) => {
+  store.manhourType.onAll().subscribe(({ key, value }) => {
     console.log('save to storage')
     console.log(`key: ${key}, value: ${value}`)
   })
