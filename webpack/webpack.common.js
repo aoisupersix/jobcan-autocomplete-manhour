@@ -6,7 +6,6 @@ const srcDir = '../src/'
 
 module.exports = {
   entry: {
-    /* eslint-disable-next-line @typescript-eslint/camelcase */
     content_script: path.join(__dirname, srcDir + 'content_script.ts'),
     popup: path.join(__dirname, srcDir + 'ui/popup.tsx'),
   },
@@ -39,6 +38,11 @@ module.exports = {
   plugins: [
     // exclude locale files in moment
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new CopyPlugin([{ from: '.', to: '../' }], { context: 'public' }),
+    new CopyPlugin(
+      {
+        patterns: [{ from: '.', to: '../' }],
+      },
+      { context: 'public' }
+    ),
   ],
 }
